@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+        <div id="container">
+            
+            <div id="root"></div>
+            
+            <div id="mainMenu">
+                <div id="dot"></div>
+                <div id="dot1"></div>
+                <div id="dot2"></div>
+                <div id="dot3"></div>
+                <div id="dot4"></div>
+                <div id="dot5"></div>
+                <div id="dot6"></div>
+                <div id="dot7"></div>
+                <div id="dot8"></div>
+                <div id="dot9"></div>
+                <h1>Беларускi Тэтрыс</h1>
+                <div id="btns">
+                    <input type="button" value="Новая гульня" id="newGameBtn"><br>
+                    <input type="button" value="Найлепшыя вынiкi" id="RecordBtn" class="btn btn-default" data-modal="modal_1"><br>
+                    <input type="button" value="Пра гульню" id="AboutBtn" class="btn btn-success" data-modal="modal_2">
+                </div>
+                
+            </div>
+        </div>
+   
+        <div class="overlay" data-close=""></div>
+        
+        <div id="modal_3" class="dlg-modal dlg-modal-slide">
+            <h2 class="op">ГУЛЬНЯ СКОНЧАНА</h2>
+            <div id="res">
+                <span >ВЫНІК: </span>
+                <span id="gameResult"></span>
+            </div>
+            <div id="pr">Калі ласка, надрукуйце ваша імя</div>
+            <input type="text" id="toMainBtn">
+            <div id="closeBtns">
+                <div class="closeGameRes" data-close="" onclick="sendResult()" id="SaveBtn">захаваць вынік</div>
+                <div class="closeGameRes" data-close="" id="toMain">да галоўнага меню</div>
+            </div>
+            
+        </div>
+        <div id="modal_1" class="dlg-modal dlg-modal-slide">
+            <span class="closer" data-close=""></span>
+            <div id="results"></div>
+        </div>
+        <div id="modal_2" class="dlg-modal dlg-modal-slide">
+            <span class="closer" data-close=""></span>
+            <p class="rulesText">Фігуры падаюць зверху да долу ў прастакутнай «шклянцы». На працягу падзення фігуры гулец можа перамяшчаць яе ўправа-ўлева, альбо паварочваць яе па гадзіннікавай стрэлцы. Фігура спыняецца, калі дасягне дна калодзежа, альбо яе руху ўніз будзе перашкаджаць іншая фігура. Калі сегменты фігур цалкам запоўняць рад, ён «згарае», а на яго месца апускаюцца вышэйляжачыя рады. Мэта гульні: размяшчаючы фігуры найшчыльней, пратрымацца як мага болей часу. Гульня лічыцца скончанай, калі ў «шклянцы» не застанецца месца для чарговай фігуры.</p>
+        </div>
+        <div id="modal_3" class="dlg-modal dlg-modal-slide">
+        </div>
+
+        <div id="navBtns">
+            <input type="button" id="up">
+            <input type="button" id="down">
+            <input type="button" id="left">
+            <input type="button" id="right">
+            <input type="button" id="pause" value="Паўза">
+        </div>
+    
+    
+    
+    <script src="http://fe.it-academy.by/JQ/jquery.js"></script>   
+    <script>var typeAnimate = 'slide';</script>
+    <script src="js/JS.js"></script>
+    
+
+    
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a, button, div, input, select, textarea, :focus, :active { 
+    outline: none; 
+}
+body {
+    background-color: white;
+    font-family: 'Poiret One', cursive;
+}
+#root {
+    padding: 50px;
+    text-align: center;
+    position: absolute;
+    width: 480px;
+    height: 640px;
+    
+}
+#root canvas {
+    display: block;
+    margin: 0 auto;
+}
+#mainMenu {
+    width: 480px;
+    height: 640px;
+    position: absolute;
+    text-align: center;
+    margin-left: 50px;
+    display: block;
+    
+}
+#container {
+    width: 640px;
+    height: 480px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    z-index: 1;
+    background-color: white;
+    margin-top: 100px;
+    
+}
+h1 {
+    font-size: 40px;
+    color: red;
+    z-index: 3;
+    margin-top: 100px;
+    
+}
+#btns > input {
+    background: red;
+    outline: 0 !important;
+    border-radius: 50%;
+    font-weight: bold;
+    border: transparent;
+    cursor: pointer;
+    margin-top: 70px;
+    width: 200px;
+    height: 70px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    -webkit-box-shadow: inset -1px 3px 8px 5px white, 2px 5px 16px 0px red, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px white, 2px 5px 16px 0px red, 5px 5px 15px 5px rgba(0,0,0,0);
+    z-index: 3;
+}
+#btns > input:hover {
+    transform: scale(1.1);
+    transition: .2s;
+    
+}
+#btns > input:active {
+    transform: scale(1);
+    -webkit-box-shadow: 2px 5px 16px 0px red, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 2px 5px 16px 0px red, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+#blockForMenu {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    z-index: 2;
+    
+}
+#main {
+    position: absolute;
+    height: 300px;
+    display: flex;
+}
+@keyframes dotAnim {
+    from {
+        top: 60px;
+        left: 50px;
+    }
+    40% {
+        top: 60px;
+        left: 400px;
+        
+    }
+    50% {
+        left: 400px;
+        top: 170px;
+        
+    }
+    90% {
+        left: 50px;
+        top: 170px;
+        
+    }
+    to {
+        top: 60px;
+        left: 50px;
+        
+    }
+}
+
+#dot, #dot1, #dot2, #dot3, #dot4, #dot5, #dot6, #dot7, #dot8, #dot9 {
+    position: absolute;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    top: 60px;
+    left: 50px;
+    
+}
+#dot {
+    animation: dotAnim 3s linear 0s infinite normal forwards;
+}
+#dot1 {
+    opacity: .9;
+    animation: dotAnim 3s linear .1s infinite normal forwards;
+}
+#dot2 {
+    opacity: .8;
+    animation: dotAnim 3s linear .2s infinite normal forwards;
+}
+#dot3 {
+    opacity: .7;
+    animation: dotAnim 3s linear .3s infinite normal forwards;
+}
+#dot4 {
+    opacity: .6;
+    animation: dotAnim 3s linear .4s infinite normal forwards;
+}
+#dot5 {
+    opacity: .5;
+    animation: dotAnim 3s linear .5s infinite normal forwards;
+}
+#dot6 {
+    opacity: .4;
+    animation: dotAnim 3s linear .6s infinite normal forwards;
+}
+#dot7 {
+    opacity: .3;
+    animation: dotAnim 3s linear .7s infinite normal forwards;
+}
+#dot8 {
+    opacity: .2;
+    animation: dotAnim 3s linear .8s infinite normal forwards;
+}
+#dot9 {
+    opacity: .1;
+    animation: dotAnim 3s linear .9s infinite normal forwards;
+}
+
+
+
+/* ОКНА об игре и рекорды */
+
+.overlay { 
+    opacity: 0; 
+    visibility: hidden; 
+    position:fixed; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    z-index: 5; 
+    background: rgba(0,0,0,0.87); 
+}
+.dlg-modal { 
+    width: 100%; 
+    max-width: 480px; 
+    height: 700px; 
+    opacity: 0; 
+    visibility: hidden; 
+    position: fixed; 
+    left: 50%; 
+    z-index: 10; 
+    padding: 35px 36px; 
+    background: red; 
+    color: white;
+    border-radius: 10px; 
+    -webkit-box-shadow: -1px -2px 7px 3px rgba(255, 0, 0, 1);
+    -moz-box-shadow: -1px -2px 7px 3px rgba(255, 0, 0, 1);
+    box-shadow: -1px -2px 7px 3px rgba(255, 0, 0, 1);
+}
+.dlg-modal-slide { 
+    top: -20px; 
+    -webkit-transform: translate(-50%, -100%); 
+    transform: translate(-50%, -100%); 
+    visibility: visible; opacity: 1; 
+}
+.rulesText {
+    padding-top: 30px;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+}
+/* закрывающий крест */
+.closer { 
+    width: 40px; 
+    height: 40px; 
+    display: block; 
+    position: absolute; 
+    right: 10px; top: 10px; 
+    background: url('../img/closeIC.png') no-repeat;
+    background-size: contain;
+    cursor: pointer; 
+}
+
+.closer:active {
+    -webkit-transform: scale(.8); 
+    transform: scale(.8); 
+    transition: .2s;
+}
+
+
+/* анимация */
+.slideInDown, .slideOutUp { 
+    -webkit-animation-duration: 0.3s; 
+    animation-duration: 0.3s; 
+    -webkit-animation-timing-function: linear; 
+    animation-timing-function: linear;
+}
+
+@keyframes slideInDown { 
+	from { 
+        top: -20px; 
+        -webkit-transform: 
+        translate(-50%, -100%); 
+        transform: translate(-50%, -100%); 
+        
+    }
+	to { 
+        top: 50%; 
+        -webkit-transform: translate(-50%, -50%); 
+        transform: translate(-50%, -50%); 
+        
+    }
+}
+.slideInDown { 
+    -webkit-animation-name: slideInDown; 
+    animation-name: slideInDown; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+}
+@keyframes slideOutUp { 
+	from { 
+        top: 50%; 
+        -webkit-transform: 
+        translate(-50%, -50%); 
+        transform: translate(-50%, -50%);
+         
+    }
+	to { 
+        top: -20px; 
+        -webkit-transform: translate(-50%, -100%); 
+        transform: translate(-50%, -100%); 
+        
+    }
+}
+.slideOutUp { 
+    -webkit-animation-name: slideOutUp; 
+    animation-name: slideOutUp; 
+}
+
+.closeGameRes {
+    width: 230px;
+    height: 70px;
+    margin: 0 auto;
+    cursor: pointer;
+    border-radius: 40px;
+    background: radial-gradient(circle at 65% 30%, white, gray);
+    font-size: 23px;
+    text-align: center;
+    color: red;
+    font-weight: 800;
+    padding-top: 17px;
+    margin-bottom: 7px;
+}
+.closeGameRes:hover {
+    -webkit-box-shadow: 0px 0px 16px 10px white;
+    -moz-box-shadow: 0px 0px 16px 10px white;
+    box-shadow: 0px 0px 16px 10px white;
+    transition: .2s;
+}
+.closeGameRes:active {
+    -webkit-box-shadow: 0px 0px 16px 10px white;
+    -moz-box-shadow: 0px 0px 16px 10px white;
+    box-shadow: 0px 0px 16px 10px white;
+    transform: scale(.9);
+}
+
+.resultSaved {
+    margin: 0 auto;
+    width: 230px;
+    height: 70px;
+    font-size: 23px;
+    background: red;
+    color: white;
+    font-weight: 800;
+    padding-top: 17px;
+    margin-bottom: 7px;
+}
+
+
+#modal_3 {
+    text-align: center;
+    background-color: red;
+    padding-top: 100px;
+}
+#modal_3 > h2, #res {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+#res {
+    margin: 100px 0 100px 0;
+}
+#pr {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+}
+#toMainBtn {
+    border: none;
+    font-size: 20px;
+    color: red;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.resultRow {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.getLight {
+    -webkit-box-shadow: 0px 0px 16px 10px white;
+    -moz-box-shadow: 0px 0px 16px 10px white;
+    box-shadow: 0px 0px 16px 10px white; 
+}
+#navBtns {
+    display: none;
+}
+

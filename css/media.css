@@ -1,0 +1,539 @@
+@media (max-width:700px) {
+    #container {
+        width: 320px;
+        height: 426px;
+        margin-top: 25px;
+    }
+    #root {
+        padding: 0;
+        width: 320px;
+        height: 426px;
+        margin-left: -50px;
+    }
+    #mainMenu {
+        width: 320px;
+        height: 426px;
+        margin-left: 0;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    #dot, #dot1, #dot2, #dot3, #dot4, #dot5, #dot6, #dot7, #dot8, #dot9 {
+        top: 80px;
+        left: 50px;
+    }
+    @keyframes dotAnim {
+        from {
+            top: 80px;
+            left: 50px;
+        }
+        40% {
+            top: 80px;
+            left: 260px;
+            
+        }
+        50% {
+            left: 260px;
+            top: 140px;
+            
+        }
+        90% {
+            left: 50px;
+            top: 140px;
+            
+        }
+        to {
+            top: 80px;
+            left: 50px;
+            
+        }
+    }
+    .dlg-modal {
+        max-width: 300px;
+        height: 510px;
+    }
+    .dlg-modal-slide {
+        transform: translate(-50%, -250%);
+    }
+    #mainMenu > input {
+        width: 160px;
+        margin-top: 40px;
+        font-size: 15px;
+    }
+    
+    @keyframes slideInDown { 
+        from { 
+            top: -20px; 
+            -webkit-transform: 
+            translate(-50%, -100%); 
+            transform: translate(-50%, -100%); 
+            
+        }
+        to { 
+            top: 50%; 
+            -webkit-transform: translate(-50%, -75%); 
+            transform: translate(-50%, -75%); 
+            
+        }
+    }
+    @keyframes slideOutUp { 
+        from { 
+            top: 50%; 
+            -webkit-transform: 
+            translate(-50%, -75%); 
+            transform: translate(-50%, -75%);
+             
+        }
+        to { 
+            top: -20px; 
+            -webkit-transform: translate(-50%, -75%); 
+            transform: translate(-50%, -75%); 
+            
+        }
+    }
+    .slideInDown { 
+        -webkit-animation-name: slideInDown; 
+        animation-name: slideInDown; 
+        top: 50%; 
+        transform: translate(-50%, -75%); 
+    }
+
+    .resultRow {
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+    .rulesText {
+        padding-top: 20px;
+        font-size: 16px;
+    }
+    #modal_3 {
+        padding-top: 20px;
+    }
+    #res {
+        margin: 30px 0 30px 0;
+        font-size: 24px;
+    }
+    #pr {
+        font-size: 15px;
+    }
+    #toMainBtn {
+        font-size: 16px;
+    }
+    .closeGameRes {
+        width: 200px;
+        height: 45px;
+        margin: 0 auto;
+        cursor: pointer;
+        border-radius: 40px;
+        background: radial-gradient(circle at 65% 30%, white, gray);
+        font-size: 18px;
+        text-align: center;
+        color: red;
+        font-weight: 800;
+        padding-top: 10px;
+        margin-bottom: 25px;
+    }
+    .resultSaved {
+        width: 200px;
+        height: 45px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+    canvas {
+        transform: scale(.66);
+    }
+    
+}
+
+@media (max-height:800px) {
+    canvas {
+        transform: scale(.66);
+    }
+    #container {
+        margin-top: 0px;
+    }
+    #root {
+        padding-top: 0;
+    }
+    .dlg-modal {
+        max-width: 300px;
+        height: 450px;
+    }
+    .dlg-modal-slide {
+        transform: translate(-50%, -250%);
+    }
+    #mainMenu > input {
+        width: 160px;
+        margin-top: 40px;
+        font-size: 15px;
+    }
+    
+    @keyframes slideInDown { 
+        from { 
+            top: -20px; 
+            -webkit-transform: 
+            translate(-50%, -100%); 
+            transform: translate(-50%, -100%); 
+            
+        }
+        to { 
+            top: 50%; 
+            -webkit-transform: translate(-50%, -53%); 
+            transform: translate(-50%, -53%);
+            
+        }
+    }
+    @keyframes slideOutUp { 
+        from { 
+            top: 50%; 
+            -webkit-transform: 
+            translate(-50%, -53%); 
+            transform: translate(-50%, -53%);
+             
+        }
+        to { 
+            top: -20px; 
+            -webkit-transform: translate(-50%, -53%); 
+            transform: translate(-50%, -53%);
+            
+        }
+    }
+    .slideInDown { 
+        -webkit-animation-name: slideInDown; 
+        animation-name: slideInDown; 
+        top: 50%; 
+        transform: translate(-50%, -53%); 
+    }
+
+    .resultRow {
+        font-size: 16px;
+        font-weight: 700;
+        margin-left: 10px;
+        margin-top: 8px;
+    }
+    .rulesText {
+        padding-top: 20px;
+        font-size: 16px;
+    }
+    #modal_3 {
+        padding-top: 20px;
+    }
+    #res {
+        margin: 30px 0 30px 0;
+        font-size: 24px;
+    }
+    #pr {
+        font-size: 15px;
+    }
+    #toMainBtn {
+        font-size: 16px;
+    }
+    .closeGameRes {
+        width: 200px;
+        height: 45px;
+        margin: 0 auto;
+        cursor: pointer;
+        border-radius: 40px;
+        background: radial-gradient(circle at 65% 30%, white, gray);
+        font-size: 18px;
+        text-align: center;
+        color: red;
+        font-weight: 800;
+        padding-top: 10px;
+        margin-bottom: 25px;
+    }
+    .resultSaved {
+        width: 200px;
+        height: 45px;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+}
+@media only screen and (max-device-width : 480px) and (orientation: portrait){
+    #navBtns {
+        display: none;
+        position: relative;
+        margin-top: 0px;
+    }
+    #root {
+        margin-top: -90px;
+    }
+    #root canvas {
+        margin-left: -25px;
+    }
+    #container {
+        margin-top: 0px;
+    }
+    #up, #down, #left, #right, #pause {
+        position: absolute;
+        border: none;
+        height: 60px;
+        width: 60px;
+        outline: none;
+        
+    }
+    #up, #down, #left, #right {
+        background: url('../img/gnomelogout.png') no-repeat;
+        background-size: contain;
+    }
+    
+    #up, #down {
+        left: calc(50% - 30px);
+    }
+    #down {
+        top: 70px;
+    }
+    #up {
+        transform: rotate(180deg);
+    }
+    #left, #right {
+        top: calc(50% + 30px);
+    }
+    #left {
+        left: calc(50% - 105px);
+        transform: rotate(90deg);
+    }
+    #right {
+        left: calc(50% + 45px);
+        transform: rotate(270deg);
+    }
+    #pause {
+        width: 70px;
+        top: -91px;
+        left: 260px;
+        font-family: 'Poiret One', cursive;
+        font-weight: 800;
+        color: red;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 0px 2px 5px #FF0000; 
+        box-shadow: 0px 0px 2px 5px #FF0000;
+        background: #ffffff;
+        background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+        background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+        z-index: 15;
+
+    }
+    #down:active, #right:active, #up:active, #left:active  {
+        width: 55px;
+        height: 55px;
+        transition: .1s;
+    }
+    #pause:active {
+        transform: scale(.9);
+        transition: .2s;
+    }
+    @keyframes forPause {
+        from {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .pauseAnim {
+        animation: forPause 1.5s linear 0s infinite normal forwards;
+    }
+    canvas {
+        transform: scale(.6);
+    }
+}
+
+
+
+
+
+
+@media screen and (orientation: landscape) and (max-width: 870px) {
+    
+    #container {
+        display: flex;
+        justify-content: center;
+        width: 426px;
+        height: 300px;
+    }
+    #root {
+        width: 426px;
+        height: 300px;
+    }
+    #root canvas {
+        transform: scale(0.45);
+        position: absolute;
+        top: -160px;
+        left: -150px;
+    }
+    #mainMenu {
+        width: 426px;
+        height: 300px;
+    }
+    #btns {
+        display: flex;
+        justify-content: space-between;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    #btns > input {
+        width: 110px;
+        font-size: 12px;
+    }
+    #dot, #dot1, #dot2, #dot3, #dot4, #dot5, #dot6, #dot7, #dot8, #dot9 {
+        top: 80px;
+        left: 100px;
+    }
+    @keyframes dotAnim {
+        from {
+            top: 80px;
+            left: 100px;
+        }
+        40% {
+            top: 80px;
+            left: 315px;
+            
+        }
+        50% {
+            left: 315px;
+            top: 140px;
+            
+        }
+        90% {
+            left: 100px;
+            top: 140px;
+            
+        }
+        to {
+            top: 80px;
+            left: 100px;
+            
+        }
+    }
+    .dlg-modal {
+        max-width: 500px;
+        height: 270px;
+        overflow: scroll;
+    }
+
+
+    #up, #down, #left, #right, #pause {
+        position: absolute;
+        border: none;
+        height: 60px;
+        width: 60px;
+        outline: none;
+        z-index: 15;
+        
+    }
+    #up, #down, #left, #right {
+        background: url('../img/gnomelogout.png') no-repeat;
+        background-size: contain;
+    }
+    
+    #up, #down {
+        left: calc(50% - 30px);
+    }
+    #down {
+        top: 70px;
+    }
+    #up {
+        transform: rotate(180deg);
+    }
+    #left, #right {
+        top: calc(50% + 30px);
+    }
+    #left {
+        left: calc(50% - 105px);
+        transform: rotate(90deg);
+    }
+    #right {
+        left: calc(50% + 45px);
+        transform: rotate(270deg);
+    }
+    #pause {
+        width: 70px;
+        top: calc(50% - 35px);
+        left: calc(50% - 35px);
+        font-family: 'Poiret One', cursive;
+        font-weight: 800;
+        color: red;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 0px 2px 5px #FF0000; 
+        box-shadow: 0px 0px 2px 5px #FF0000;
+        background: #ffffff;
+        background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%);
+        background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+        background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 );
+        z-index: 20;
+
+    }
+    #down:active, #right:active, #up:active, #left:active  {
+        width: 55px;
+        height: 55px;
+        transition: .1s;
+    }
+    #pause:active {
+        transform: scale(.9);
+        transition: .2s;
+    }
+    @keyframes forPause {
+        from {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .pauseAnim {
+        animation: forPause 1.5s linear 0s infinite normal forwards;
+    }
+    #up, #down {
+        left: calc(50% - -120px);
+    }
+    #left, #right {
+        top: calc(50% + -30px);
+    }
+    #right {
+        left: calc(50% + 190px);
+    }
+    #left {
+        left: calc(50% - -50px);
+    }
+    #up {
+        top: calc(50% - 90px);
+    }
+    #down {
+        top: calc(50% + 30px);
+    }
+    #modal_3 > h2 {
+        font-size: 28px;
+    }
+    #pr {
+        margin-bottom: 12px;
+    }
+    #closeBtns {
+        display: flex;
+        justify-content: space-around;
+    }
+    .closeGameRes {
+        font-size: 14px;
+        height: 38px;
+        width: 170px;
+        margin-bottom: 0;
+    }
+    .resultSaved {
+        width: 170px;
+        height: 38px;
+        font-size: 18px;
+        margin-bottom: 0;
+        padding-top: 9px;
+    }
+}
