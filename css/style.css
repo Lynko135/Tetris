@@ -183,7 +183,7 @@ h1 {
 .dlg-modal { 
     width: 100%; 
     max-width: 480px; 
-    height: 700px; 
+    height: 750px; 
     opacity: 0; 
     visibility: hidden; 
     position: fixed; 
