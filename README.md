@@ -1,4 +1,4 @@
 # Tetris
-Graduation project
-Course: "WEB Application Development with JavaScript"
-web application(SPA) using OOP, MVC, AJAX
+- graduation project
+- course: "WEB Application Development with JavaScript"
+- web application(SPA) using OOP, MVC, AJAX
