@@ -7,7 +7,8 @@ a, button, div, input, select, textarea, :focus, :active {
     outline: none; 
 }
 body {
-    background-color: white;
+    background:url(../img/4847466.jpg);
+    background-size: cover;
     font-family: 'Poiret One', cursive;
 }
 #root {
@@ -40,6 +41,7 @@ body {
     z-index: 1;
     background-color: white;
     margin-top: 100px;
+    background: transparent;
     
 }
 h1 {
